@@ -32,7 +32,8 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class PhotoViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that allows users to be viewed or edited.  I used ModelViewSet to just get a quick setup working
+    In an real environment, I would break these up and do them separately.
     """
     queryset = Photo.objects.all()
     serializer_class = PhotoSerializer
