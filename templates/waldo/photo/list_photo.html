@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Photos
+{% endblock %}
+
+{% block body_block %}
+
+    <h1>Photos Processed</h1>
+
+    <br/>
+
+    <table>
+        {% for photo in photos %}
+        <tr>
+              <td>
+                <table class="container">
+                    <tr>
+                        <td>ID/PK: </td>
+                        <td>
+                            <span>{{ photo.pk }}</span>
+                            <!--
+                            {% comment %}
+                            <a href="{% url 'photo-detail' pk=photo.pk %}"><span>{{ photo.pk }}</span></a>
+                            {% endcomment %}
+                            -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name: </td>
+                        <td><span>{{ photo.name }}</span></td>
+                    </tr>
+                    <tr>
+                        <td>S3 Key: </td>
+                        <td><span>{{ photo.s3_key }}</span></td>
+                    </tr>
+                </table>
+              </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block footer_block %}
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,41 @@
+#-*- mode: conf -*-
+
+# Djed App
+Django==1.10.1
+djangorestframework==3.4.7      # BSD: https://pypi.python.org/pypi/djangorestframework
+django-model-utils==2.5.2         # BSD: https://pypi.python.org/pypi/django-model-utils
+django-vanilla-views==1.0.4
+django-filter==0.14.0
+django-cors-headers==1.1.0
+django-bootstrap-toolkit==2.15.0
+
+markdown==2.6.7
+
+Pillow==3.4.2                 # Standard PIL License: https://pypi.python.org/pypi/Pillow
+
+
+psycopg2==2.6.2
+# bcrypt==3.1.0
+
+## required for S3 staticfiles
+django-storages==1.5.1
+boto==2.43.0                    # MIT: https://pypi.python.org/pypi/boto
+
+# Other Requirements from site
+gunicorn
+requests
+django-rest-swagger
+
+sphinx
+sphinx_rtd_theme
+mock
+responses
+ipdb
+ipython
+
+pylint
+coverage
+django-jenkins
+django-extensions
+
+raven==5.32.0                    # BSD: https://pypi.python.org/pypi/raven - required for integration with Sentry for Logging

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title_block %}
+            Waldo Code Test
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/waldo.css' %}">
+
+</head>
+<body>
+
+    <div align="right">
+        {% block header_block %}
+            {% if username %}
+                <table>
+                    <tr>
+                        <td>{{ username }}</td>
+                        <td><a href="{% url 'logout' %}"><button id="logout-btn">Logout</button></a></td>
+                    </tr>
+                </table>
+            {% endif %}
+        {% endblock %}
+    </div>
+
+    <div>
+        {% block body_block %}
+
+        {% endblock %}
+    </div>
+
+    <div>
+        {% block footer_block %}
+
+        {% endblock %}
+    </div>
+
+    <script src="{% static "js/jquery-3.0.0.min.js" %}"></script>
+    <script src="{% static "js/waldo.js" %}"></script>
+
+</body>
+</html>
